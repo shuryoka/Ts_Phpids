@@ -1,0 +1,3 @@
+[submodule "lib/PHPIDS"]
+	path = lib/PHPIDS
+	url = git@github.com:PHPIDS/PHPIDS.git

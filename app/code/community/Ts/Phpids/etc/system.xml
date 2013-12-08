@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <ts_phpids translate="label" module="ts_phpids">
+            <label>PHPIDS</label>
+            <tab>service</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>10</sort_order>
+            <show_in_default>1</show_in_default>
+            <groups>
+                <general translate="label">
+                    <label>General</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <fields>
+                        <enable translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                        </enable>
+                        <request_type translate="label">
+                            <label>Request type</label>
+                            <comment>Choose request types to check</comment>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>ts_phpids/adminhtml_system_config_source_requesttype</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                        </request_type>
+                        <filter_type translate="label">
+                            <label>Filter type</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ts_phpids/adminhtml_system_config_source_filtertype</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                        </filter_type>
+                        <scan_keys translate="label">
+                            <label>Scan keys</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                        </scan_keys>
+                        <tolerance_log translate="label">
+                            <label>Logging impact</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                        </tolerance_log>
+                        <tolerance_block translate="label">
+                            <label>Blocking impact</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                        </tolerance_block>
+                        <html translate="label">
+                            <label>HTML</label>
+                            <comment><![CDATA[params which may contain HTML<br />one field per line]]></comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                        </html>
+                        <json translate="label">
+                            <label>JSON</label>
+                            <comment><![CDATA[params which may contain JSON<br />one field per line]]></comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>80</sort_order>
+                            <show_in_default>1</show_in_default>
+                        </json>
+                        <exceptions translate="label">
+                            <label>Exceptions</label>
+                            <comment><![CDATA[input which doesn't need checks<br />one per line]]></comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                        </exceptions>
+                        <logging>
+                            <label>Log</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                        </logging>
+                    </fields>
+                </general>
+                <caching translate="label">
+                    <label>Caching</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <fields>
+                        <cache translate="label">
+                            <label>Filter type</label>
+                            <comment>the other types will be included in the next updates</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ts_phpids/adminhtml_system_config_source_cachetype</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                        </cache>
+                        <expiration_time translate="label">
+                            <label>Expiration time</label>
+                            <comment>time in seconds, 0 = no cache</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                        </expiration_time>
+                    </fields>
+                </caching>
+            </groups>
+        </ts_phpids>
+    </sections>
+</config>

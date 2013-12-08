@@ -1,0 +1,3 @@
+app/code/community/Ts/Phpids/               app/code/community/Ts/Phpids/
+app/etc/modules/Ts_Phpids.xml               app/etc/modules/Ts_Phpids.xml
+lib/PHPIDS/lib/IDS/                         lib/PHPIDS/lib/IDS/

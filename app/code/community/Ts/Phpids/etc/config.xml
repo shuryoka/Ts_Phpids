@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Ts_Phpids>
+            <version>0.1.0</version>
+        </Ts_Phpids>
+    </modules>
+
+    <global>
+        <helpers>
+            <ts_phpids>
+                <class>Ts_Phpids_Helper</class>
+            </ts_phpids>
+        </helpers>
+        <models>
+            <ts_phpids>
+                <class>Ts_Phpids_Model</class>
+            </ts_phpids>
+        </models>
+    </global>
+
+    <frontend>
+        <events>
+            <controller_action_predispatch>
+                <observers>
+                    <ts_phpids>
+                        <class>ts_phpids/phpids</class>
+                        <method>doPhpidsCheckIfEnabledInBackendAndRequestTypesAreSelected</method>
+                    </ts_phpids>
+                </observers>
+            </controller_action_predispatch>
+        </events>
+    </frontend>
+
+    <default>
+        <ts_phpids>
+            <general>
+                <enable>1</enable>
+                <request_type>REQUEST,POST,GET,COOKIE</request_type>
+                <filter_type>xml</filter_type>
+                <scan_keys>xml</scan_keys>
+                <logging>1</logging>
+                <tolerance_log>2</tolerance_log>
+                <tolerance_block>15</tolerance_block>
+                <exceptions><![CDATA[GET.__utmz
+GET.__utmc]]></exceptions>
+            </general>
+            <caching>
+                <cache>file</cache>
+                <expiration_time>600</expiration_time>
+            </caching>
+        </ts_phpids>
+    </default>
+</config>
